@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #3b766d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      form {
+        width: 960px;
+      }
+
+      .form-group {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 10px;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      label {
+        text-align: right;
+        color: white;
+      }
+
+      input,
+      textarea,
+      select {
+        display: flex;
+        width: 500px;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 12px;
+        align-self: flex-end;
+      }
+      select {
+        width: 516px;
+      }
+
+      textarea {
+        height: 80px;
+      }
+
+      .checkbox-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .checkbox-group div {
+        width: 524px;
+        color: white;
+        display: flex;
+      }
+      .ckeckin {
+        width: 25px;
+        align-self: flex-start;
+      }
+
+      button {
+        background-color: #f57c00;
+        color: white;
+        border: 1px solid white;
+        cursor: pointer;
+        padding: 1rem;
+        border-radius: 2px;
+      }
+
+      button:hover {
+        background-color: #e06800;
+      }
+
+      .button_box {
+        margin: 24px 0 0 550px;
+        display: flex;
+        gap: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <form>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="email@gmail.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" id="age" name="age" placeholder="25" required />
+        </div>
+
+        <div class="form-group">
+          <label for="mobile">Mobile Number</label>
+          <input
+            pattern="[0-9]{10}"
+            type="tel"
+            id="mobile"
+            name="mobile"
+            placeholder="1234567890"
+            required
+            title="Please enter a valid 10-digit mobile number"
+            maxlength="10"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="watch">How do you watch South Park?</label>
+          <select id="watch" name="watch">
+            <option value="" disabled selected>Select an option</option>
+            <option value="love">I love it</option>
+            <option value="like">I like it</option>
+            <option value="ok">It's ok</option>
+            <option value="not-really">Not really</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>How much do you like South Park</label>
+          <div class="checkbox-group">
+            <div>
+              <input
+                class="ckeckin"
+                type="radio"
+                name="feedback"
+                value="love"
+              />
+              <span> I love it</span>
+            </div>
+            <div>
+              <input
+                class="ckeckin"
+                type="radio"
+                name="feedback"
+                value="like"
+              />
+              <span> I like it</span>
+            </div>
+            <div>
+              <input class="ckeckin" type="radio" name="feedback" value="ok" />
+              <span> It's ok</span>
+            </div>
+            <div>
+              <input
+                class="ckeckin"
+                type="radio"
+                name="feedback"
+                value="not-really"
+              />
+              <span> Not really</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="seasons"
+            >How many seasons of South Park have you watched?</label
+          >
+          <select id="seasons" name="seasons">
+            <option value="" disabled selected>Select an option</option>
+            <option value="none">None</option>
+            <option value="few">A few</option>
+            <option value="many">Many</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Who do you watch South Park with?</label>
+          <div class="checkbox-group">
+            <div>
+              <input class="ckeckin" type="checkbox" value="alone" />
+              <span> Alone</span>
+            </div>
+            <div>
+              <input class="ckeckin" type="checkbox" value="friends" />
+              <span> Friends</span>
+            </div>
+            <div>
+              <input class="ckeckin" type="checkbox" value="family" />
+              <span> Family</span>
+            </div>
+            <div>
+              <input class="ckeckin" type="checkbox" value="partner" />
+              <span> Partner</span>
+            </div>
+            <div>
+              <input class="ckeckin" type="checkbox" value="other" />
+              <span> Other</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="comments"
+            >Tell us more about your favorite character(s) or episode(s)</label
+          >
+          <textarea
+            id="comments"
+            name="comments"
+            placeholder="Your comments..."
+          ></textarea>
+        </div>
+
+        <div class="button_box">
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
